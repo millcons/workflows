@@ -23,3 +23,8 @@ jobs:
       run: |
         echo "Event payload:"
         echo '${{ toJson(github.event) }}'
+
+    - name: Checkout specific branch
+      uses: actions/checkout@v3
+      with:
+        ref: {{ github.ref_name }}
